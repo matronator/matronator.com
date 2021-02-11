@@ -3,6 +3,24 @@ html, body {
   margin: 0;
 }
 
+.webswitcher {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.webswitcher a {
+  color: #000000;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+.webswitcher a:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+
 .mainmenu {
   height: 100vh;
   display: flex;
@@ -65,6 +83,25 @@ html, body {
   background-image: linear-gradient(0deg, transparent 50%, rgba(255,255,255,.08) 30%);
   background-size: 130px 130px;
 }
+.donations {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.donations > a {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.btc-address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btc-address-qr {
+  margin-bottom: 1rem;
+  border: 3px solid #fff;
+}
 
 #menuitem-work.toggled > h1 {
   min-height: 0;
@@ -105,7 +142,7 @@ html, body {
 
 .foliorow, .flextech {
   margin-top: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .foliorow .col-4 {
@@ -147,7 +184,7 @@ html, body {
   -webkit-box-shadow: inset 0px -80px 24px -30px #000000ff;
   -moz-box-shadow: inset 0px -80px 24px -30px #000000ff;
   box-shadow: inset 0px -80px 24px -30px #000000ff;
-  /* e7cc5eff 
+  /* e7cc5eff
 } */
 
 #pills-art .moreon {
@@ -160,7 +197,7 @@ html, body {
 .techfolio {
   height: 200px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 .artfolio, .techfolio {
 transition: all 0.3s ease;
@@ -234,6 +271,19 @@ background-image: url("../img/tech8.jpg");
 #techfolio9{
 background-image: url("../img/tech9.jpg");
 }
+#techfolio10{
+background-image: url("../img/globalcollapse.jpg");
+}
+#techfolio11{
+background-image: url("../img/tech11.jpg");
+background-position: top center;
+}
+#techfolio12{
+background-image: url("../img/tech12.jpg");
+}
+#techfolio13{
+background-image: url("../img/tech13.jpg");
+}
 
 .nav-pills {
   background-color: #8a8a8a;
@@ -257,4 +307,20 @@ background-image: url("../img/tech9.jpg");
 .email-link:hover, .email-link:active, .email-link:focus {
   color: #007bff;
   text-decoration: none;
+}
+
+.lang-chart {
+  position: relative;
+  flex-grow: 2;
+  height: auto;
+}
+.chart {
+  position: relative;
+  width: 100%;
+  min-height: 128px;
+  max-height: 100%;
+}
+.chart > embed {
+  height: 100%;
+  max-height: 200px;
 }
