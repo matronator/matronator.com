@@ -24,8 +24,8 @@
   <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Plugins CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
-  <link href="/vendor/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+  <link href="./vendor/baguetteBox.js/baguetteBox.min.css" rel="stylesheet">
+  <link href="./vendor/jquery-ui/jquery-ui.min.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/qqo6vak.css">
 
@@ -39,7 +39,7 @@
   </aside>
 
   <section class="mainmenu text-center">
-    <div class="menuitem" id="menuitem-about">
+    <div class="menuitem" id="about" data-location="about">
       <!-- About -->
       <h1>About</h1>
       <div class="contentdiv hidden" id="content-about">
@@ -52,25 +52,25 @@
         <p class="font-weight-light mt-4 pt-4 mb-0 pb-0">Matronator &copy; 2020</p>
       </div>
     </div>
-    <div class="menuitem" id="menuitem-work">
+    <div class="menuitem" id="work" data-location="work">
       <!-- Portfolio -->
       <h1>Projects</h1>
       <div class="contentdiv hidden" id="content-work">
         <!-- Navigation for tabs -->
         <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" id="pills-music-tab" data-toggle="pill" href="#pills-music" role="tab" aria-controls="pills-music" aria-selected="true">Music</a>
+            <a class="nav-link active" data-active-hash="music" data-location="work#music" id="pills-music-tab" data-toggle="pill" href="#work#music" role="tab" aria-controls="work#music" aria-selected="true">Music</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="pills-art-tab" data-toggle="pill" href="#pills-art" role="tab" aria-controls="pills-art" aria-selected="false">Art / Design</a>
+            <a class="nav-link" data-active-hash="art" data-location="work#art" id="pills-art-tab" data-toggle="pill" href="#work#art" role="tab" aria-controls="work#art" aria-selected="false">Art / Design</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="pills-tech-tab" data-toggle="pill" href="#pills-tech" role="tab" aria-controls="pills-tech" aria-selected="false">Coding</a>
+            <a class="nav-link" data-active-hash="code" data-location="work#code" id="pills-tech-tab" data-toggle="pill" href="#work#code" role="tab" aria-controls="work#code" aria-selected="false">Coding</a>
           </li>
         </ul>
         <!-- Tabs -->
         <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane outside-tab show active" id="pills-music" role="tabpanel" aria-labelledby="pills-music-tab">
+          <div class="tab-pane outside-tab show active" id="work#music" data-active-hash="music" role="tabpanel" aria-labelledby="pills-music-tab">
             <!-- <div class="scroll-indicator"></div> -->
             <div class="container-fluid inside-tab">
               <div class="d-flex flex-row justify-content-center foliorow pt-3">
@@ -104,22 +104,22 @@
               </div>
             </div>
           </div>
-          <div class="tab-pane outside-tab" id="pills-art" role="tabpanel" aria-labelledby="pills-art-tab">
+          <div class="tab-pane outside-tab" id="work#art" data-active-hash="art" role="tabpanel" aria-labelledby="pills-art-tab">
             <div class="container-fluid inside-tab">
               <div class="row justify-content-around flexartio">
-                <div class="col-4 px-2 artfolio" id="artfolio1" data-toggle="lightbox" data-gallery="example-gallery" data-remote="res/img/art1.jpg"></div>
-                <div class="col-4 px-2 artfolio" id="artfolio4" data-toggle="lightbox" data-gallery="example-gallery" data-remote="res/img/art44.jpg"></div>
-                <div class="col-4 px-2 artfolio" id="artfolio3" data-toggle="lightbox" data-gallery="example-gallery" data-remote="res/img/art3.jpg"></div>
+                <div class="col-4 px-2 artfolio" id="artfolio1" data-toggle="lightbox" data-gallery="example-gallery" data-remote="src/img/art1.jpg"></div>
+                <div class="col-4 px-2 artfolio" id="artfolio4" data-toggle="lightbox" data-gallery="example-gallery" data-remote="src/img/art44.jpg"></div>
+                <div class="col-4 px-2 artfolio" id="artfolio3" data-toggle="lightbox" data-gallery="example-gallery" data-remote="src/img/art3.jpg"></div>
               </div>
               <div class="row justify-content-around flexartio">
-                <div class="col-4 px-2 artfolio" id="artfolio5" data-toggle="lightbox" data-gallery="example-gallery" data-remote="res/img/art7.jpg"></div>
-                <div class="col-4 px-2 artfolio" id="artfolio2" data-toggle="lightbox" data-gallery="example-gallery" data-remote="res/img/art5.jpg"></div>
-                <div class="col-4 px-2 artfolio" id="artfolio6" data-toggle="lightbox" data-gallery="example-gallery" data-remote="res/img/art6.jpg"></div>
+                <div class="col-4 px-2 artfolio" id="artfolio5" data-toggle="lightbox" data-gallery="example-gallery" data-remote="src/img/art7.jpg"></div>
+                <div class="col-4 px-2 artfolio" id="artfolio2" data-toggle="lightbox" data-gallery="example-gallery" data-remote="src/img/art5.jpg"></div>
+                <div class="col-4 px-2 artfolio" id="artfolio6" data-toggle="lightbox" data-gallery="example-gallery" data-remote="src/img/art6.jpg"></div>
               </div>
               <div class="row justify-content-around flexartio">
-                <div class="col-4 px-2 artfolio" id="artfolio7" data-toggle="lightbox" data-gallery="example-gallery" data-remote="res/img/art77.jpg"></div>
-                <div class="col-4 px-2 artfolio" id="artfolio8" data-toggle="lightbox" data-gallery="example-gallery" data-remote="res/img/art8.jpg"></div>
-                <div class="col-4 px-2 artfolio" id="artfolio9" data-toggle="lightbox" data-gallery="example-gallery" data-remote="res/img/art9.jpg"></div>
+                <div class="col-4 px-2 artfolio" id="artfolio7" data-toggle="lightbox" data-gallery="example-gallery" data-remote="src/img/art77.jpg"></div>
+                <div class="col-4 px-2 artfolio" id="artfolio8" data-toggle="lightbox" data-gallery="example-gallery" data-remote="src/img/art8.jpg"></div>
+                <div class="col-4 px-2 artfolio" id="artfolio9" data-toggle="lightbox" data-gallery="example-gallery" data-remote="src/img/art9.jpg"></div>
               </div>
               <div class="d-flex flex-row justify-content-center">
                 <h4 class="moreon">Follow me on</h4>
@@ -134,7 +134,7 @@
               </div>
             </div>
           </div>
-          <div class="tab-pane outside-tab" id="pills-tech" role="tabpanel" aria-labelledby="pills-tech-tab">
+          <div class="tab-pane outside-tab" id="work#code" data-active-hash="code" role="tabpanel" aria-labelledby="pills-tech-tab">
             <div class="container-fluid inside-tab">
               <!-- <div class="d-flex flex-row justify-content-around">
                 <div class="lang-chart">
@@ -233,7 +233,7 @@
         </div>
       </div>
     </div>
-    <div class="menuitem" id="menuitem-contact">
+    <div class="menuitem" id="contact" data-location="contact">
       <!-- Contact -->
       <h1>Contact</h1>
       <div class="contentdiv hidden" id="content-contact">
@@ -264,13 +264,14 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+<!--  <script src="vendor/jquery-ui/jquery-ui.min.js"></script>-->
 
   <!-- Plugins JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+  <script src="./vendor/baguetteBox.js/baguetteBox.min.js"></script>
 
   <!-- Custom JS -->
-  <script src="/src/js/main.js"></script>
+  <script src="./src/js/main.js"></script>
 
 </body>
 
