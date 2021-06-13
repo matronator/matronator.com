@@ -46,12 +46,22 @@ document.addEventListener(`DOMContentLoaded`, () => {
     })
 })
 
+window.addEventListener(`popstate`, evt => {
+    pageLoaded()
+})
+
 function pageLoaded() {
     const parts = location.hash.indexOf(`-`) !== -1 ? location.hash.replace(`#`, ``)
         .split(`-`, 2) : [location.hash.replace(`#`, ``), ``]
     const page = parts[0]
     const hash = parts[1]
     console.log(`#${page}-${hash}`)
+    document.querySelectorAll(`.contentdiv`).forEach(el => {
+        el.classList.add(`hidden`)
+    })
+    document.querySelectorAll(`.menuitem`).forEach(el => {
+        el.classList.remove(`toggled`)
+    })
     if (page.length > 1) {
         const content = document.getElementById(page)
         if (content) {
