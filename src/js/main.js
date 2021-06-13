@@ -47,20 +47,20 @@ document.addEventListener(`DOMContentLoaded`, () => {
 })
 
 function pageLoaded() {
-    const page = location.pathname
-    const hash = location.hash
-    console.log(`${page}${hash}`)
-    if (page !== `/`) {
-        const activeItem = page.replace(`/`, ``)
-        const content = document.getElementById(activeItem)
+    const parts = location.hash.indexOf(`-`) !== -1 ? location.hash.replace(`#`, ``)
+        .split(`-`, 2) : [location.hash.replace(`#`, ``), ``]
+    const page = parts[0]
+    const hash = parts[1]
+    console.log(`#${page}-${hash}`)
+    if (page.length > 1) {
+        const content = document.getElementById(page)
         if (content) {
             content.classList.add(`toggled`)
             if (content.querySelector(`.contentdiv`)) {
                 content.querySelector(`.contentdiv`).classList.remove(`hidden`)
             }
         }
-        if (hash.length > 2) {
-            const activeHash = hash.replace(`#`, ``)
+        if (hash.length > 1) {
             const activeLinks = document.querySelectorAll(`.nav-link.active`)
             if (activeLinks) {
                 activeLinks.forEach(el => {
@@ -73,7 +73,7 @@ function pageLoaded() {
                     el.classList.remove(`active`, `show`)
                 })
             }
-            const activeElements = document.querySelectorAll(`[data-active-hash="${activeHash}"]`)
+            const activeElements = document.querySelectorAll(`[data-active-hash="${hash}"]`)
             if (activeElements) {
                 activeElements.forEach(el => {
                     el.classList.add(`active`)
