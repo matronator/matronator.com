@@ -1,3 +1,9 @@
 .vscode
 .htaccess
 /wip.jpg
+.DS_Store
+/.idea/
+/.idea/matronator.com.iml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
