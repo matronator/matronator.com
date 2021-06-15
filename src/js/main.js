@@ -1,7 +1,7 @@
 document.addEventListener(`DOMContentLoaded`, () => {
     pageLoaded()
 
-    baguetteBox.run(`[data-toggle="lightbox"]`) // TODO: Fix lightbox
+    baguetteBox.run(`.art-gallery`)
 
     const menuItems = document.querySelectorAll(`.menuitem`)
     menuItems.forEach(el => {
@@ -12,6 +12,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
                     || evt.target.hasAttribute(`href`)
                     || evt.target.hasAttribute(`src`)
                     || evt.target.hasAttribute(`onclick`)
+                    || evt.target.hasAttribute(`data-gallery`)
                     || evt.target.tagName === `I`) return
             }
             evt.preventDefault()
