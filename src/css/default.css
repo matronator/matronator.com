@@ -1,3 +1,10 @@
+:root {
+  --py-40: 20px;
+  --py-20: 10px;
+  --tech-cols: 1;
+  --tech-gap: 10px;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -52,18 +59,26 @@ html, body {
   min-height: 40px;
 }
 .tab-content {
+  position: relative;
   display: flex;
   flex-direction: column;
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
 }
 .outside-tab {
+  position: relative;
   display: flex;
   flex-direction: column;
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
 }
 .inside-tab {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -85,12 +100,23 @@ html, body {
 }
 .donations {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
 .donations > a {
   margin-left: 1rem;
   margin-right: 1rem;
+  display: block;
+}
+.donations > a > img {
+  width: 100%;
+  max-width: 128px;
+}
+#work-music .donations > a > img {
+  width: 100%;
+  max-width: 156px;
 }
 .btc-address {
   display: flex;
@@ -119,13 +145,18 @@ html, body {
   display: flex;
   flex-direction: column;
   opacity: 1;
+  height: 100%;
   color: #ededed;
-  padding: 30px 20px;
+  padding: 30px var(--py-20);
 }
 
 #content-about {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: var(--py-40);
+  padding-right: var(--py-40);
+}
+
+#content-about p.lead {
+  font-size: 1.125rem;
 }
 
 #content-work {
@@ -140,7 +171,7 @@ html, body {
   padding: 0;
 }
 
-.foliorow, .flextech {
+.foliorow, .tech-grid {
   margin-top: 5px;
   margin-bottom: 0px;
 }
@@ -154,10 +185,6 @@ html, body {
   height: 90px;
   padding-bottom: 10px;
   padding-top: 10px;
-}
-
-.music-link {
-  max-height: 100%;
 }
 
 .moreon {
@@ -193,6 +220,7 @@ html, body {
 .artfolio {
   height: 140px;
   margin-top: 5px;
+  display: block;
 }
 .techfolio {
   height: 200px;
@@ -200,11 +228,11 @@ html, body {
   margin-bottom: 0px;
 }
 .artfolio, .techfolio {
-transition: all 0.3s ease;
--webkit-transition: all 0.3s ease;
-background-size: 100%;
-background-position: center;
-width: auto;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  background-size: 100%;
+  background-position: center;
+  width: auto;
 }
 .artfolio:hover, .techfolio:hover {
 background-size: 110%;
@@ -309,6 +337,50 @@ background-image: url("../img/tech13.jpg");
   text-decoration: none;
 }
 
+.tech-grid-wrapper {
+  overflow: hidden;
+}
+
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: calc(var(--tech-gap) * -1);
+  margin-top: 10px;
+}
+.tech-grid > * {
+  margin: var(--tech-gap);
+}
+.card-tech {
+  flex: 1 1 auto;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-top: 0;
+  width: calc((100% / var(--tech-cols)) - 2 * var(--tech-gap));
+  padding-left: 0px;
+  padding-right: 0px;
+  position: relative;
+  background-color: rgba(190, 30, 45, .1);
+  backdrop-filter: blur(10px) grayscale(50%);
+  -webkit-backdrop-filter: blur(10px) grayscale(50%);
+  background-blend-mode: hard-light;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 0 5px -3px rgba(0, 0, 0, 0.4);
+  /*mix-blend-mode: overlay;*/
+}
+.card-tech > .card-img-top {
+  margin-top: 0;
+  padding-top: 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: calc(60vw / (var(--tech-cols) * 1.25));
+  padding-bottom: 50%;
+}
+
 .lang-chart {
   position: relative;
   flex-grow: 2;
@@ -323,4 +395,105 @@ background-image: url("../img/tech13.jpg");
 .chart > embed {
   height: 100%;
   max-height: 200px;
+}
+
+@media screen and (max-width: 340px) {
+  :root {
+    --py-40: 10px;
+    --py-20: 5px;
+    --tech-cols: 1;
+    --tech-gap: 5px;
+  }
+  #content-about p.lead {
+    font-size: 0.875rem;
+  }
+  #work-music .donations > a > img {
+    width: 100%;
+    max-width: 118px;
+  }
+  #content-contact .btn {
+    padding: .3rem .5rem;
+  }
+  #content-contact .fa-3x {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 576px) {
+  :root {
+    --tech-cols: 2;
+  }
+  #content-about p.lead {
+    font-size: 1.25rem;
+  }
+  #work-music .donations > a > img {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 960px) {
+  :root {
+    --tech-gap: 10px;
+  }
+  #content-about p.lead {
+    font-size: 1.25rem;
+  }
+  #work-music .donations > a > img {
+    width: 100%;
+    max-width: 200px;
+  }
+  .card-tech > .card-img-top {
+    /*height: 256px;*/
+  }
+}
+@media screen and (min-width: 1280px) {
+  :root {
+    --py-40: 40px;
+    --py-20: 20px;
+    --tech-cols: 3;
+  }
+  #content-about p.lead {
+    font-size: 1.5rem;
+  }
+  .artfolio {
+    height: 200px;
+  }
+  #content-contact .fa-3x {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  :root {
+    --tech-cols: 4;
+    --tech-gap: 5px;
+  }
+  #content-about p.lead {
+    font-size: 1.5rem;
+  }
+  .artfolio {
+    height: 200px;
+  }
+  #content-contact .fa-3x {
+    font-size: 5rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  :root {
+    --py-40: 60px;
+    --py-20: 30px;
+    --tech-cols: 5;
+    --tech-gap: 10px;
+  }
+  #work-music .donations > a > img {
+    width: 100%;
+    max-width: 300px;
+  }
+  #content-about p.lead {
+    font-size: 2rem;
+  }
+  .artfolio {
+    height: 250px;
+  }
+  #content-contact .fa-3x {
+    font-size: 6rem;
+  }
 }
