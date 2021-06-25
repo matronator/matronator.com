@@ -13,6 +13,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
                     || evt.target.hasAttribute(`src`)
                     || evt.target.hasAttribute(`onclick`)
                     || evt.target.hasAttribute(`data-gallery`)
+                    || evt.target.hasAttribute(`data-image-href`)
                     || evt.target.tagName === `I`) return
             }
             evt.preventDefault()
@@ -53,6 +54,15 @@ document.addEventListener(`DOMContentLoaded`, () => {
             }
         })
     })
+
+    const imageLinks = document.querySelectorAll(`[data-image-href]`)
+    if (imageLinks) {
+        imageLinks.forEach(el => {
+            el.addEventListener(`click`, e => {
+                window.open(el.dataset.imageHref, `_blank`)
+            })
+        })
+    }
 })
 
 window.addEventListener(`popstate`, evt => {
