@@ -35,6 +35,14 @@ document.addEventListener(`DOMContentLoaded`, () => {
         })
     })
 
+    const techCards = document.querySelectorAll(`.card-body`)
+    techCards.forEach(el => {
+        el.addEventListener(`click`, e => {
+            e.stopImmediatePropagation()
+            e.stopPropagation()
+        })
+    })
+
     const tabLinks = document.querySelectorAll(`.nav-link`)
     tabLinks.forEach(el => {
         el.addEventListener(`click`, evt => {

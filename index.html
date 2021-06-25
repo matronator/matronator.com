@@ -41,9 +41,9 @@
 <section class="mainmenu text-center">
   <div class="menuitem" id="about" data-location="#about">
     <!-- About -->
-    <h1>About</h1>
+    <h1 data-locale-key="menu.about">About</h1>
     <div class="contentdiv hidden" id="content-about">
-      <p class="lead mt-0 pt-0 mb-4 font-weight-normal">Welcome to my humble "portfolio" or rather just a small showcase of some of my work. I'm mostly a web developer (HTML/CSS/JS/PHP) but I also do video editing, music and design. If you'd like to hire me for a job or want to see some more examples/references, contacts are at the bottom of the page.</p>
+      <p class="lead mt-0 pt-0 mb-4 font-weight-normal" data-locale-key="about.text">Welcome to my humble "portfolio" or rather just a small showcase of some of my work. I'm mostly a web developer (HTML/CSS/JS/PHP) but I also do video editing, music and design. If you'd like to hire me for a job or want to see some more examples/references, contacts are at the bottom of the page.</p>
       <div class="donations">
         <a href="https://www.blockchain.com/btc/address/35VRpVQaqFWjUCnVRpGineShz76QyYgSVg" target="_blank"><img src="/src/img/RibbonDonateBitcoin.png"></a>
         <a href="https://ko-fi.com/U7U2MDBC" target="_blank"><img src="https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2" alt="Buy Me a Coffee at ko-fi.com"></a>
@@ -54,18 +54,18 @@
   </div>
   <div class="menuitem" id="work" data-location="#work">
     <!-- Portfolio -->
-    <h1>Projects</h1>
+    <h1 data-locale-key="menu.projects">Projects</h1>
     <div class="contentdiv hidden" id="content-work">
       <!-- Navigation for tabs -->
       <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active" data-active-hash="music" data-location="#work-music" id="pills-music-tab" data-toggle="pill" href="#work-music" role="tab" aria-controls="work-music" aria-selected="true">Music</a>
+          <a class="nav-link active" data-locale-key="projects.tabs.music" data-active-hash="music" data-location="#work-music" id="pills-music-tab" data-toggle="pill" href="#work-music" role="tab" aria-controls="work-music" aria-selected="true">Music</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-active-hash="art" data-location="#work-art" id="pills-art-tab" data-toggle="pill" href="#work-art" role="tab" aria-controls="work-art" aria-selected="false">Art / Design</a>
+          <a class="nav-link" data-locale-key="projects.tabs.artDesign" data-active-hash="art" data-location="#work-art" id="pills-art-tab" data-toggle="pill" href="#work-art" role="tab" aria-controls="work-art" aria-selected="false">Art / Design</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-active-hash="code" data-location="#work-code" id="pills-tech-tab" data-toggle="pill" href="#work-code" role="tab" aria-controls="work-code" aria-selected="false">Coding</a>
+          <a class="nav-link" data-locale-key="projects.tabs.code" data-active-hash="code" data-location="#work-code" id="pills-tech-tab" data-toggle="pill" href="#work-code" role="tab" aria-controls="work-code" aria-selected="false">Coding</a>
         </li>
       </ul>
       <!-- Tabs -->
@@ -83,7 +83,7 @@
               </div>
             </div>
             <div class="mt-4 row justify-content-center">
-              <h4 class="moreon">More music on:</h4>
+              <h4 class="moreon" data-locale-key="projects.music.moreOn">More music on:</h4>
             </div>
             <div class="row justify-content-around donations">
               <a href="https://soundcloud.com/matronator" class="my-2" target="_blank" title="Visit my SoundCloud">
@@ -101,18 +101,18 @@
         <div class="tab-pane outside-tab" id="work-art" data-active-hash="art" role="tabpanel" aria-labelledby="pills-art-tab">
           <div class="container-fluid inside-tab">
             <div class="row justify-content-around flexartio art-gallery mb-4">
-              <a href="./src/img/art1.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio1" data-gallery="art-design"></a>
-              <a href="./src/img/art44.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio4" data-gallery="art-design"></a>
-              <a href="./src/img/art3.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio3" data-gallery="art-design"></a>
-              <a href="./src/img/art7.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio5" data-gallery="art-design"></a>
-              <a href="./src/img/art5.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio2" data-gallery="art-design"></a>
-              <a href="./src/img/art6.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio6" data-gallery="art-design"></a>
-              <a href="./src/img/art77.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio7" data-gallery="art-design"></a>
-              <a href="./src/img/art8.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio8" data-gallery="art-design"></a>
-              <a href="./src/img/art9.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio9" data-gallery="art-design"></a>
+              <a href="./src/img/art/art1.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio1" data-gallery="art-design"></a>
+              <a href="./src/img/art/art44.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio4" data-gallery="art-design"></a>
+              <a href="./src/img/art/art3.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio3" data-gallery="art-design"></a>
+              <a href="./src/img/art/art11.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio5" data-gallery="art-design"></a>
+              <a href="./src/img/art/art5.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio2" data-gallery="art-design"></a>
+              <a href="./src/img/art/art6.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio6" data-gallery="art-design"></a>
+              <a href="./src/img/art/art77.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio7" data-gallery="art-design"></a>
+              <a href="./src/img/art/art8.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio8" data-gallery="art-design"></a>
+              <a href="./src/img/art/art9.jpg" class="col-md-4 col-sm-6 col-12 px-2 artfolio" id="artfolio9" data-gallery="art-design"></a>
             </div>
             <div class="row justify-content-center">
-              <h4 class="moreon">Follow me on</h4>
+              <h4 class="moreon" data-locale-key="projects.artDesign.followMe">Follow me on</h4>
             </div>
             <div class="row justify-content-center">
               <a class="col-12 col-sm-6 col-md-4 col-lg-3 d-block foliocol" href="https://www.instagram.com/matronator/" target="_blank" title="Instagram">
@@ -135,94 +135,101 @@
             <!--</div>-->
             <div class="tech-grid">
               <div class="card-tech">
+                <div class="techfolio card-img-top" id="techfolio14" style="cursor: pointer;" onclick="window.open('https://github.com/matronator/axette','_blank');"></div>
+                <div class="card-body" id="techfoliod14">
+                  <h5 class="card-title"><a href="https://github.com/matronator/axette" target="_blank" title="Anxiety Simulator" data-locale-key="projects.code.axette.title">Axette</a></h5>
+                  <p class="card-text" data-locale-key="projects.code.axette.body">Very simple and lightweight AJAX library for the Nette Framework.</p>
+                </div>
+              </div>
+              <div class="card-tech">
                 <div class="techfolio card-img-top" id="techfolio11" style="cursor: pointer;" onclick="window.open('https://matronator.github.io/AnxietySimulator/','_blank');"></div>
                 <div class="card-body" id="techfoliod11">
-                  <h5 class="card-title"><a href="https://matronator.github.io/AnxietySimulator/" target="_blank" title="Anxiety Simulator">Anxiety Simulator</a></h5>
-                  <p class="card-text">Simulation game of various anxiety disorders made in Phaser. Source code <a href="https://github.com/matronator/AnxietySimulator" target="_blank" title="Source code">available on GitHub.</a></p>
+                  <h5 class="card-title"><a href="https://matronator.github.io/AnxietySimulator/" target="_blank" title="Anxiety Simulator" data-locale-key="projects.code.anxietySimulator.title">Anxiety Simulator</a></h5>
+                  <p class="card-text" data-locale-key="projects.code.anxietySimulator.body">Simulation game of various anxiety disorders made in Phaser. Source code <a href="https://github.com/matronator/AnxietySimulator" target="_blank" title="Source code">available on GitHub.</a></p>
                 </div>
               </div>
               <div class="card-tech">
                 <div class="techfolio card-img-top" id="techfolio12" style="cursor: pointer;" onclick="window.open('https://github.com/matronator/starterpack','_blank');"></div>
                 <div class="card-body" id="techfoliod12">
-                  <h5 class="card-title"><a href="https://github.com/matronator/starterpack" target="_blank" title="Starterpack">Starterpack</a></h5>
-                  <p class="card-text">Starter template for Nette projects with custom CMS.</p>
+                  <h5 class="card-title"><a href="https://github.com/matronator/starterpack" data-locale-key="projects.code.starterpack.title" target="_blank" title="Starterpack">Starterpack</a></h5>
+                  <p class="card-text" data-locale-key="projects.code.starterpack.body">Starter template for Nette projects with custom CMS.</p>
                 </div>
               </div>
               <div class="card-tech">
                 <div class="techfolio card-img-top" id="techfolio13" style="cursor: pointer;" onclick="window.open('https://matronator.github.io/MatecakSoundboard/','_blank');"></div>
                 <div class="card-body" id="techfoliod13">
                   <h5 class="card-title"><a href="https://matronator.github.io/MatecakSoundboard/" target="_blank" title="Matečák Soundboard">Matečák Soundboard</a></h5>
-                  <p class="card-text">Soundboard of the (in)famous Czech video Matečák, with built-in beat machine. Source code <a href="https://github.com/matronator/MatecakSoundboard" target="_blank" title="Source code">available on GitHub.</a></p>
+                  <p class="card-text" data-locale-key="projects.code.matecak.body">Mauglí Matečák Soundboard, with a beat machine. Source code <a href="https://github.com/matronator/MatecakSoundboard" target="_blank" title="Source code">available on GitHub.</a></p>
                 </div>
               </div>
               <div class="card-tech">
                 <div class="techfolio card-img-top" id="techfolio10" style="cursor: pointer;" onclick="window.open('https://global-collapse.com','_blank');"></div>
                 <div class="card-body" id="techfoliod10">
                   <h5 class="card-title"><a href="https://global-collapse.com" target="_blank" title="Global Collapse: Pandemic">Global Collapse: Pandemic</a></h5>
-                  <p class="card-text">Browser-based MMORPG about coronavirus apocalypse. Source code <a href="https://github.com/matronator/GlobalCollapse" target="_blank" title="Source code">available on GitHub.</a></p>
+                  <p class="card-text" data-locale-key="projects.code.globalCollapse.body">Browser-based MMORPG about coronavirus apocalypse. Source code <a href="https://github.com/matronator/GlobalCollapse" target="_blank" title="Source code">available on GitHub.</a></p>
                 </div>
               </div>
               <div class="card-tech">
                 <div class="techfolio card-img-top" id="techfolio9" style="cursor: pointer;" onclick="window.open('https://www.dcprotez.cz','_blank');"></div>
                 <div class="card-body" id="techfoliod9">
                   <h5 class="card-title"><a href="https://www.dcprotez.cz" target="_blank" title="Dobrovolnické centrum Protěž">DC Protěž</a></h5>
-                  <p class="card-text">Prague based non-profit organization Protěž focuses on volunteer work and community services.</p>
+                  <p class="card-text" data-locale-key="projects.code.protez.body">Prague based non-profit organization Protěž focuses on volunteer work and community services.</p>
                 </div>
               </div>
               <div class="card-tech">
                 <div class="techfolio card-img-top" id="techfolio1" style="cursor: pointer;" onclick="window.open('http://bitcoingo.matronator.com/','_blank');"></div>
                 <div class="card-body" id="techfoliod1">
                   <h5 class="card-title"><a href="http://bitcoingo.matronator.com/" target="_blank" title="BitcoinGo">BitcoinGo.io</a></h5>
-                  <p class="card-text">An upcoming blockchain project, fully decentralized and community-driven. NOT a Bitcoin fork!</p>
+                  <p class="card-text" data-locale-key="projects.code.btcGo.body">An upcoming blockchain project, fully decentralized and community-driven. NOT a Bitcoin fork!</p>
                 </div>
               </div>
               <div class="card-tech">
                 <div class="techfolio card-img-top" id="techfolio8" style="cursor: pointer;" onclick="window.open('https://www.skolickagrebovka.cz','_blank');"></div>
                 <div class="card-body" id="techfoliod8">
                   <h5 class="card-title"><a href="https://www.skolickagrebovka.cz" target="_blank" title="Školička Grébovka">Školička Grébovka</a></h5>
-                  <p class="card-text">Školička Grébovka is a children's group for preschool children two years and older.</p>
+                  <p class="card-text" data-locale-key="projects.code.skolka.body">Školička Grébovka is a children's group for preschool children two years and older.</p>
                 </div>
               </div>
               <div class="card-tech">
                 <div class="techfolio card-img-top" id="techfolio6" style="cursor: pointer;" onclick="window.open('http://noblesmanor.matronator.com','_blank');"></div>
                 <div class="card-body" id="techfoliod6">
                   <h5 class="card-title"><a href="http://noblesmanor.matronator.com" target="_blank" title="Nobles Manor under the Castle">Nobles Manor Apartments</a></h5>
-                  <p class="card-text">Booking website for Nobles Manor under the Castle apartments in the Lesser Town of Prague.</p>
+                  <p class="card-text" data-locale-key="projects.code.noblesManor.body">Booking website for Nobles Manor under the Castle apartments in the Lesser Town of Prague.</p>
                 </div>
               </div>
               <div class="card-tech">
                 <div class="techfolio card-img-top" id="techfolio7" style="cursor: pointer;" onclick="window.open('https://burner.matronator.com/','_blank');"></div>
                 <div class="card-body" id="techfoliod7">
                   <h5 class="card-title"><a href="https://burner.matronator.com/" target="_blank" title="Message Burner">Message Burner</a></h5>
-                  <p class="card-text">Service for creating self-destructing messages, inspired by Privnote.</p>
+                  <p class="card-text" data-locale-key="projects.code.burner.body">Service for creating self-destructing messages, inspired by Privnote.</p>
                 </div>
               </div>
               <div class="card-tech">
                 <div class="techfolio card-img-top" id="techfolio4" style="cursor: pointer;" onclick="window.open('http://files.matronator.com/magicwarsdemo.zip');"></div>
                 <div class="card-body" id="techfoliod4">
                   <h5 class="card-title"><a href="http://files.matronator.com/magicwarsdemo.zip" title="Download Demo">Magic Wars Demo (15.3 MB)</a></h5>
-                  <p class="card-text">A single player card game for Windows. Demo contains three decks and enemies. Project inactive for several years now.<a href="http://magicwars.8u.cz/" target="_blank" title="Magic Wars">More info (CZ only)</a></p>
+                  <p class="card-text" data-locale-key="projects.code.magicWars.body">A single player card game for Windows. Demo contains three decks and enemies. Project inactive for several years now.<a href="http://magicwars.8u.cz/" target="_blank" title="Magic Wars">More info (CZ only)</a></p>
                 </div>
               </div>
               <div class="card-tech">
                 <div class="techfolio card-img-top" id="techfolio5" style="cursor: pointer;" onclick="window.open('https://matronator.github.io/feed-the-flames');"></div>
                 <div class="card-body" id="techfoliod5">
                   <h5 class="card-title"><a href="https://matronator.github.io/feed-the-flames" target="_blank" title="Feed the Flames">Feed the Flames</a></h5>
-                  <p class="card-text">Simple HTML5/JavaScript game concept made with CraftyJS.<a href="https://github.com/matronator/feed-the-flames" target="_blank" title="Source code">View source code on GitHub.</a></p>
+                  <p class="card-text" data-locale-key="projects.code.feedTheFlames.body">Simple HTML5/JavaScript game concept made with CraftyJS.<a href="https://github.com/matronator/feed-the-flames" target="_blank" title="Source code">View source code on GitHub.</a></p>
                 </div>
               </div>
               <div class="card-tech">
                 <div class="techfolio card-img-top" id="techfolio3" style="cursor: pointer;" onclick="window.open('http://destruction.matronator.com/','_blank');"></div>
                 <div class="card-body" id="techfoliod3">
                   <h5 class="card-title"><a href="http://destruction.matronator.com/" target="_blank" title="Symphony of Destruction">Symphony of Destruction</a></h5>
-                  <p class="card-text">A simple relaxation website from back in the day. Requires enabled autoplay on videos to fully work.</p>
+                  <p class="card-text" data-locale-key="projects.code.destruction.body">A simple relaxation website from back in the day. Requires enabled autoplay on videos to fully work.</p>
                 </div>
               </div>
               <div class="card-tech">
                 <div class="techfolio card-img-top" id="techfolio2" style="cursor: pointer;" onclick="window.open('https://btc.matronator.com/?r=34NByYEZHm6Fgwc3GUWMveGHkWnEbpBw8q','_blank');"></div>
                 <div class="card-body" id="techfoliod2">
                   <h5 class="card-title"><a href="https://btc.matronator.com/?r=34NByYEZHm6Fgwc3GUWMveGHkWnEbpBw8q" target="_blank" title="Bitcoin Faucet">Matronator's Bitcoin Faucet</a></h5>
-                  <p class="card-text">One of the highest paying bitcoin faucet on FaucetSystem.com (CryptoBara). Up to 5000 satoshi per claim.</p>
+                  <p class="card-text" data-locale-key="projects.code.faucet.body">One of the highest paying bitcoin faucet on FaucetSystem.com (CryptoBara). Up to 5000 satoshi per claim.</p>
                 </div>
               </div>
             </div>
