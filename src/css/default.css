@@ -140,6 +140,13 @@ html, body {
 #work.toggled {
   justify-content: flex-start;
 }
+#about.toggled .contentdiv,
+#contact.toggled .contentdiv {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 
 .contentdiv {
   display: flex;
