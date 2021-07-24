@@ -45,9 +45,9 @@
     <div class="contentdiv hidden" id="content-about">
       <p class="lead mt-0 pt-0 mb-4 font-weight-normal" data-locale-key="about.text">Welcome to my humble "portfolio" or rather just a small showcase of some of my work. I'm mostly a web developer (HTML/CSS/JS/PHP) but I also do video editing, music and design. If you'd like to hire me for a job or want to see some more examples/references, contacts are at the bottom of the page.</p>
       <div class="donations">
-        <a href="https://www.blockchain.com/btc/address/35VRpVQaqFWjUCnVRpGineShz76QyYgSVg" target="_blank"><img src="/src/img/RibbonDonateBitcoin.png"></a>
+        <a href="https://www.blockchain.com/btc/address/35VRpVQaqFWjUCnVRpGineShz76QyYgSVg" target="_blank"><img src="/src/img/RibbonDonateBitcoin.png" alt="Donate in Bitcoin"></a>
         <a href="https://ko-fi.com/U7U2MDBC" target="_blank"><img src="https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2" alt="Buy Me a Coffee at ko-fi.com"></a>
-        <a href="https://www.paypal.me/matronator" target="_blank"><img src="/src/img/paypal.png"></a>
+        <a href="https://www.paypal.me/matronator" target="_blank"><img src="/src/img/paypal.png" alt="Donate via PayPal"></a>
       </div>
       <p class="font-weight-light mt-4 pt-4 mb-0 pb-0">Matronator &copy; 2021</p>
     </div>
@@ -75,11 +75,11 @@
           <div class="container-fluid inside-tab px-0">
             <div class="row justify-content-center foliorow pt-3">
               <div class="col-12 col-sm-6">
-                <iframe width="100%" height="310" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/126871501&color=%23992828&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"></iframe>
+                <iframe width="100%" height="310" style="border: none; overflow: hidden;" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/126871501&color=%23992828&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"></iframe>
               </div>
               <div class="col-12 col-sm-6 d-flex flex-column">
-                <iframe width="100%" height="60" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&mini=1&feed=%2Fmatronator%2F" frameborder="0" ></iframe>
-                <iframe width="100%" height="250" src="https://www.mixcloud.com/widget/follow/?light=1&u=%2Fmatronator%2F" frameborder="0" ></iframe>
+                <iframe width="100%" height="60" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&mini=1&feed=%2Fmatronator%2F" style="border: none;"></iframe>
+                <iframe width="100%" height="250" src="https://www.mixcloud.com/widget/follow/?light=1&u=%2Fmatronator%2F" style="border: none;"></iframe>
               </div>
             </div>
             <div class="mt-4 row justify-content-center">
@@ -116,10 +116,10 @@
             </div>
             <div class="row justify-content-center">
               <a class="col-12 col-sm-6 col-md-4 col-lg-3 d-block foliocol" href="https://www.instagram.com/matronator/" target="_blank" title="Instagram">
-                <img src="/src/img/instalogo.png" width="auto" height="80" class="img" alt="Instagram">
+                <img src="/src/img/instalogo.png" style="height: 80px;" class="img" alt="Instagram">
               </a>
               <a class="col-12 col-sm-6 col-md-4 col-lg-3 d-block foliocol" href="https://www.neonmob.com/matronator" target="_blank" title="NeonMob">
-                <img src="/src/img/neonlogo.png" width="auto" height="80" class="img" alt="NeonMob">
+                <img src="/src/img/neonlogo.png" style="height: 80px;" class="img" alt="NeonMob">
               </a>
             </div>
           </div>
@@ -142,6 +142,13 @@
                 </div>
               </div>
               <div class="card-tech">
+                <div class="techfolio card-img-top" id="techfolio10" style="cursor: pointer;" data-image-href="https://global-collapse.com"></div>
+                <div class="card-body" id="techfoliod10">
+                  <h5 class="card-title"><a href="https://global-collapse.com" target="_blank" title="Global Collapse: Pandemic">Global Collapse: Pandemic</a></h5>
+                  <p class="card-text" data-locale-key="projects.code.globalCollapse.body">Browser-based MMORPG made in PHP with Nette. Source code <a href="https://github.com/matronator/GlobalCollapse" target="_blank" title="Source code">available on GitHub.</a></p>
+                </div>
+              </div>
+              <div class="card-tech">
                 <div class="techfolio card-img-top" id="techfolio11" style="cursor: pointer;" data-image-href="https://matronator.github.io/AnxietySimulator/"></div>
                 <div class="card-body" id="techfoliod11">
                   <h5 class="card-title"><a href="https://matronator.github.io/AnxietySimulator/" target="_blank" title="Anxiety Simulator" data-locale-key="projects.code.anxietySimulator.title">Anxiety Simulator</a></h5>
@@ -152,7 +159,28 @@
                 <div class="techfolio card-img-top" id="techfolio12" style="cursor: pointer;" data-image-href="https://github.com/matronator/starterpack"></div>
                 <div class="card-body" id="techfoliod12">
                   <h5 class="card-title"><a href="https://github.com/matronator/starterpack" data-locale-key="projects.code.starterpack.title" target="_blank" title="Starterpack">Starterpack</a></h5>
-                  <p class="card-text" data-locale-key="projects.code.starterpack.body">Starter template for Nette projects with custom CMS.</p>
+                  <p class="card-text" data-locale-key="projects.code.starterpack.body">Starter template for Nette projects with custom CMS. <a href="https://cms.matronator.com" target="_blank" title="Starterpack DEMO">Live preview</a></p>
+                </div>
+              </div>
+              <div class="card-tech">
+                <div class="techfolio card-img-top" id="techfolio7" style="cursor: pointer;" data-image-href="https://burner.matronator.com/"></div>
+                <div class="card-body" id="techfoliod7">
+                  <h5 class="card-title"><a href="https://burner.matronator.com/" target="_blank" title="Message Burner">Message Burner</a></h5>
+                  <p class="card-text" data-locale-key="projects.code.burner.body">Service for creating self-destructing messages, inspired by Privnote.</p>
+                </div>
+              </div>
+              <div class="card-tech">
+                <div class="techfolio card-img-top" id="techfolio5" style="cursor: pointer;" onclick="window.open('https://matronator.github.io/feed-the-flames');"></div>
+                <div class="card-body" id="techfoliod5">
+                  <h5 class="card-title"><a href="https://matronator.github.io/feed-the-flames" target="_blank" title="Feed the Flames">Feed the Flames</a></h5>
+                  <p class="card-text" data-locale-key="projects.code.feedTheFlames.body">Simple HTML5/JavaScript game concept made with CraftyJS. <a href="https://github.com/matronator/feed-the-flames" target="_blank" title="Source code">View source code on GitHub.</a></p>
+                </div>
+              </div>
+              <div class="card-tech">
+                <div class="techfolio card-img-top" id="techfolio9" style="cursor: pointer;" data-image-href="https://www.dcprotez.cz"></div>
+                <div class="card-body" id="techfoliod9">
+                  <h5 class="card-title"><a href="https://www.dcprotez.cz" target="_blank" title="Dobrovolnické centrum Protěž">DC Protěž</a></h5>
+                  <p class="card-text" data-locale-key="projects.code.protez.body">Website and custom-made CMS for a volunteer and community center in Prague.</p>
                 </div>
               </div>
               <div class="card-tech">
@@ -160,20 +188,6 @@
                 <div class="card-body" id="techfoliod13">
                   <h5 class="card-title"><a href="https://matronator.github.io/MatecakSoundboard/" target="_blank" title="Matečák Soundboard">Matečák Soundboard</a></h5>
                   <p class="card-text" data-locale-key="projects.code.matecak.body">Mauglí Matečák Soundboard, with a beat machine. Source code <a href="https://github.com/matronator/MatecakSoundboard" target="_blank" title="Source code">available on GitHub.</a></p>
-                </div>
-              </div>
-              <div class="card-tech">
-                <div class="techfolio card-img-top" id="techfolio10" style="cursor: pointer;" data-image-href="https://global-collapse.com"></div>
-                <div class="card-body" id="techfoliod10">
-                  <h5 class="card-title"><a href="https://global-collapse.com" target="_blank" title="Global Collapse: Pandemic">Global Collapse: Pandemic</a></h5>
-                  <p class="card-text" data-locale-key="projects.code.globalCollapse.body">Browser-based MMORPG about coronavirus apocalypse. Source code <a href="https://github.com/matronator/GlobalCollapse" target="_blank" title="Source code">available on GitHub.</a></p>
-                </div>
-              </div>
-              <div class="card-tech">
-                <div class="techfolio card-img-top" id="techfolio9" style="cursor: pointer;" data-image-href="https://www.dcprotez.cz"></div>
-                <div class="card-body" id="techfoliod9">
-                  <h5 class="card-title"><a href="https://www.dcprotez.cz" target="_blank" title="Dobrovolnické centrum Protěž">DC Protěž</a></h5>
-                  <p class="card-text" data-locale-key="projects.code.protez.body">Prague based non-profit organization Protěž focuses on volunteer work and community services.</p>
                 </div>
               </div>
               <div class="card-tech">
@@ -198,24 +212,10 @@
                 </div>
               </div>
               <div class="card-tech">
-                <div class="techfolio card-img-top" id="techfolio7" style="cursor: pointer;" data-image-href="https://burner.matronator.com/"></div>
-                <div class="card-body" id="techfoliod7">
-                  <h5 class="card-title"><a href="https://burner.matronator.com/" target="_blank" title="Message Burner">Message Burner</a></h5>
-                  <p class="card-text" data-locale-key="projects.code.burner.body">Service for creating self-destructing messages, inspired by Privnote.</p>
-                </div>
-              </div>
-              <div class="card-tech">
                 <div class="techfolio card-img-top" id="techfolio4" style="cursor: pointer;" onclick="window.open('http://files.matronator.com/magicwarsdemo.zip');"></div>
                 <div class="card-body" id="techfoliod4">
                   <h5 class="card-title"><a href="http://files.matronator.com/magicwarsdemo.zip" title="Download Demo">Magic Wars Demo (15.3 MB)</a></h5>
-                  <p class="card-text" data-locale-key="projects.code.magicWars.body">A single player card game for Windows. Demo contains three decks and enemies. Project inactive for several years now.<a href="http://magicwars.8u.cz/" target="_blank" title="Magic Wars">More info (CZ only)</a></p>
-                </div>
-              </div>
-              <div class="card-tech">
-                <div class="techfolio card-img-top" id="techfolio5" style="cursor: pointer;" onclick="window.open('https://matronator.github.io/feed-the-flames');"></div>
-                <div class="card-body" id="techfoliod5">
-                  <h5 class="card-title"><a href="https://matronator.github.io/feed-the-flames" target="_blank" title="Feed the Flames">Feed the Flames</a></h5>
-                  <p class="card-text" data-locale-key="projects.code.feedTheFlames.body">Simple HTML5/JavaScript game concept made with CraftyJS.<a href="https://github.com/matronator/feed-the-flames" target="_blank" title="Source code">View source code on GitHub.</a></p>
+                  <p class="card-text" data-locale-key="projects.code.magicWars.body">A single player card game for Windows. Demo contains three decks and enemies. Project inactive for several years now. <a href="http://magicwars.8u.cz/" target="_blank" title="Magic Wars">More info (CZ only)</a></p>
                 </div>
               </div>
               <div class="card-tech">
@@ -256,11 +256,11 @@
         <a href="https://ko-fi.com/U7U2MDBC" target="_blank"><img src="https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2" alt="Buy Me a Coffee at ko-fi.com"></a>
         <div class="btc-address">
           <a class="btc-address" href="https://www.blockchain.com/btc/address/35VRpVQaqFWjUCnVRpGineShz76QyYgSVg" target="_blank">
-            <img src="/src/img/btc.png" alt="Donate bitcoins" height="128" class="btc-address-qr">
-            <img src="/src/img/RibbonDonateBitcoin2.png" height="36" alt="Donate bitcoins">
+            <img src="/src/img/btc.png" alt="Donate bitcoins" style="height: 128px;" class="btc-address-qr">
+            <img src="/src/img/RibbonDonateBitcoin2.png" style="height: 36px;" alt="Donate bitcoins">
           </a>
         </div>
-        <a href="https://www.paypal.me/matronator" target="_blank"><img src="/src/img/paypal.png" width="143" alt="Donate with paypal"></a>
+        <a href="https://www.paypal.me/matronator" target="_blank"><img src="/src/img/paypal.png" style="width: 286px;" alt="Donate with paypal"></a>
       </div>
     </div>
   </div>
@@ -277,9 +277,9 @@
 
 <!-- Custom JS -->
 <!--For dev:-->
-<!--<script src="./src/js/main.js"></script>-->
+<script src="./src/js/main.js"></script>
 <!--For production:-->
-<script src="./src/js/matronator-12d4d2a961.js"></script>
+<!--<script src="./src/js/matronator-12d4d2a961.js"></script>-->
 
 </body>
 

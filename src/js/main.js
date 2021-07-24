@@ -58,18 +58,21 @@ document.addEventListener(`DOMContentLoaded`, () => {
     const imageLinks = document.querySelectorAll(`[data-image-href]`)
     if (imageLinks) {
         imageLinks.forEach(el => {
-            el.addEventListener(`click`, e => {
+            el.addEventListener(`click`, () => {
                 window.open(el.dataset.imageHref, `_blank`)
             })
         })
     }
+
+    fetchLocale()
 })
 
-window.addEventListener(`popstate`, evt => {
+window.addEventListener(`popstate`, () => {
     pageLoaded()
 })
 
 function pageLoaded() {
+    const hashes = location.hash.split(`#`, 2)
     const parts = location.hash.indexOf(`-`) !== -1 ? location.hash.replace(`#`, ``)
         .split(`-`, 2) : [location.hash.replace(`#`, ``), ``]
     const page = parts[0]
@@ -114,3 +117,32 @@ function pageLoaded() {
         }
     }
 }
+
+async function fetchLocale(lang = `en`) {
+    const formData = new FormData()
+    formData.append(`lang`, lang)
+    const response = await fetch(`/get-locale.php`, {
+        method: `POST`,
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'Content-Type': `multipart/form-data`,
+        },
+        body: formData
+    })
+    const res = await response.json()
+    const localeNodes = document.querySelectorAll(`[data-locale-key]`)
+    localeNodes.forEach(el => {
+        const key = el.getAttribute(`data-locale-key`)
+        console.log(key)
+        const translation = resolve(key, res)
+        console.log(translation)
+        el.textContent = translation
+    })
+}
+
+function resolve(path, obj) {
+    return path.split('.').reduce(function(prev, curr) {
+        return prev ? prev[curr] : null
+    }, obj || self)
+}
+
