@@ -35,14 +35,23 @@ html, body {
 }
 .menuitem h1 {
   color: #f5f5f5;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  transition: all 300ms ease;
+  font-family: "bebas-kai", sans-serif;
+  font-size: 4em;
+}
+.menuitem:hover h1 {
+  letter-spacing: .4em;
+  text-indent: .4em;
 }
 .menuitem {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: all 0.3s ease;
+  text-align: center;
   -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   flex-grow: 1;
   -webkit-box-shadow: inset 0 3px 5px -3px rgba(0,0,0,0.75);
   -moz-box-shadow: inset 0 3px 5px -3px rgba(0,0,0,0.75);
@@ -84,17 +93,17 @@ html, body {
 }
 
 #about {
-  background-color: #75B9BE;
+  background-color: #63b1d0;
   background-image: linear-gradient(0deg, transparent 50%, rgba(255,255,255,.08) 30%);
   background-size: 80px 80px;
 }
 #work {
-  background-color: #e7cc5e;
+  background-color: #efbd5a;
   background-image: linear-gradient(0deg, transparent 50%, rgba(255,255,255,.11) 30%);
   background-size: 100px 100px;
 }
 #contact {
-  background-color: #EE7674;
+  background-color: #f36967;
   background-image: linear-gradient(0deg, transparent 50%, rgba(255,255,255,.08) 30%);
   background-size: 130px 130px;
 }
@@ -147,6 +156,10 @@ html, body {
   flex-direction: column;
   justify-content: space-evenly;
 }
+.menuitem.toggled {
+  /*height: 100%;*/
+  transition: all 300ms ease;
+}
 
 .contentdiv {
   display: flex;
@@ -155,6 +168,8 @@ html, body {
   height: 100%;
   color: #ededed;
   padding: 30px var(--py-20);
+  transition: height 300ms ease;
+  transition-property: height, padding, opacity, min-height, max-height;
 }
 
 #content-about {
@@ -171,11 +186,14 @@ html, body {
 }
 
 .contentdiv.hidden {
-  opacity: 0;
+  opacity: 1;
   height: 0;
+  max-height: 0;
   min-height: 0;
   overflow: hidden;
   padding: 0;
+  transition: height 300ms ease;
+  transition-property: height, padding, opacity, min-height, max-height;
 }
 
 .foliorow, .tech-grid {
@@ -373,6 +391,17 @@ background-image: url("../img/tech/tech14.jpg");
   border-bottom-right-radius: 20px;
   box-shadow: 0 0 5px -3px rgba(0, 0, 0, 0.4);
   /*mix-blend-mode: overlay;*/
+}
+.card-text {
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.33);
+  /*filter: drop-shadow(0 0 6px rgba(0,0,0,0.35));*/
+  font-weight: 300;
+}
+.card-text > a {
+  text-shadow: 1px 1px 4px rgba(246,251,255,0.125);
+  /*text-shadow: none;*/
+  font-weight: 400;
 }
 .card-tech > .card-img-top {
   margin-top: 0;
