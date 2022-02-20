@@ -40,6 +40,7 @@ html, body {
   transition: all 300ms ease;
   font-family: "bebas-kai", sans-serif;
   font-size: 4em;
+  cursor: pointer;
 }
 .menuitem:hover h1 {
   letter-spacing: .4em;
@@ -242,6 +243,12 @@ html, body {
 #work\#art .moreon {
   margin-top: 10px;
 }
+.artfolio, .techfolio {
+  transition: all 200ms ease;
+  /*-webkit-transition: all 0.3s ease;*/
+  background-size: 100%;
+  background-position: center;
+}
 .artfolio {
   height: 140px;
   margin-top: 5px;
@@ -251,12 +258,6 @@ html, body {
   height: 200px;
   margin-top: 10px;
   margin-bottom: 0;
-}
-.artfolio, .techfolio {
-  transition: all 200ms ease;
-  /*-webkit-transition: all 0.3s ease;*/
-  background-size: 100%;
-  background-position: center;
   width: auto;
 }
 .artfolio:hover, .techfolio:hover {

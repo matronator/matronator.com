@@ -64,7 +64,24 @@ document.addEventListener(`DOMContentLoaded`, () => {
         })
     }
 
-    fetchLocale()
+    fetchLocale(location.hostname === `xn--7k8hc83f.ws` ? `emoji` : `en`)
+
+    // const langToggles = document.querySelectorAll(`[data-language-toggle]`)
+    // if (langToggles) {
+    //     langToggles.forEach(el => {
+    //         el.addEventListener(`click`, evt => {
+    //             evt.preventDefault()
+    //             fetchLocale(el.dataset.languageToggle)
+    //             if (el.dataset.languageToggle === `emoji`) {
+    //                 el.setAttribute(`data-language-toggle`, `en`)
+    //                 el.textContent = `Back to English`
+    //             } else {
+    //                 el.setAttribute(`data-language-toggle`, `emoji`)
+    //                 el.textContent = `😎`
+    //             }
+    //         })
+    //     })
+    // }
 })
 
 window.addEventListener(`popstate`, () => {
@@ -77,7 +94,7 @@ function pageLoaded() {
         .split(`-`, 2) : [location.hash.replace(`#`, ``), ``]
     const page = parts[0]
     const hash = parts[1]
-    console.log(`#${page}-${hash}`)
+    // console.log(`#${page}-${hash}`)
     document.querySelectorAll(`.contentdiv`).forEach(el => {
         el.classList.add(`hidden`)
     })
@@ -125,7 +142,6 @@ async function fetchLocale(lang = `en`) {
         method: `POST`,
         headers: {
             'X-Requested-With': 'XMLHttpRequest',
-            'Content-Type': `multipart/form-data`,
         },
         body: formData
     })
@@ -133,10 +149,10 @@ async function fetchLocale(lang = `en`) {
     const localeNodes = document.querySelectorAll(`[data-locale-key]`)
     localeNodes.forEach(el => {
         const key = el.getAttribute(`data-locale-key`)
-        console.log(key)
+        // console.log(key)
         const translation = resolve(key, res)
-        console.log(translation)
-        el.textContent = translation
+        // console.log(translation)
+        el.innerHTML = translation
     })
 }
 
@@ -145,4 +161,3 @@ function resolve(path, obj) {
         return prev ? prev[curr] : null
     }, obj || self)
 }
-
