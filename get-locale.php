@@ -6,12 +6,14 @@ if (!empty($_POST)) {
         header("Location: https://www.youtube.com/watch?v=yywxYYk4OWo");
         die();
     }
-    if ($lang === 'emoji') {
-        $locale = json_decode(file_get_contents(__DIR__ . '/locale/emoji.json'));
-    } else {
-        $locale = json_decode(file_get_contents(__DIR__ . '/locale/en_US.json'));
+
+    $locale = 'en';
+    if (preg_match('/en|cs|emoji/i', $lang, $match)) {
+        $locale = trim(strtolower($match[0]));
     }
+
+    $strings = json_decode(file_get_contents(__DIR__ . "/locale/$locale.json"));
     header("Content-Type: application/json");
-    echo json_encode($locale);
+    echo json_encode($strings);
     die();
 }

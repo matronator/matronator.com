@@ -66,22 +66,21 @@ document.addEventListener(`DOMContentLoaded`, () => {
 
     fetchLocale(location.hostname === `xn--7k8hc83f.ws` ? `emoji` : `en`)
 
-    // const langToggles = document.querySelectorAll(`[data-language-toggle]`)
-    // if (langToggles) {
-    //     langToggles.forEach(el => {
-    //         el.addEventListener(`click`, evt => {
-    //             evt.preventDefault()
-    //             fetchLocale(el.dataset.languageToggle)
-    //             if (el.dataset.languageToggle === `emoji`) {
-    //                 el.setAttribute(`data-language-toggle`, `en`)
-    //                 el.textContent = `Back to English`
-    //             } else {
-    //                 el.setAttribute(`data-language-toggle`, `emoji`)
-    //                 el.textContent = `😎`
-    //             }
-    //         })
-    //     })
-    // }
+    const langToggles = document.querySelectorAll(`[data-language-toggle]`)
+    if (langToggles) {
+        langToggles.forEach(el => {
+            if (el.getAttribute(`href`) !== "http://🎧💻🎨.ws") {
+                el.addEventListener(`click`, evt => {
+                    evt.preventDefault()
+                    fetchLocale(el.dataset.languageToggle)
+                    langToggles.forEach(other => {
+                        other.classList.remove(`locale-active`)
+                    })
+                    el.classList.add(`locale-active`)
+                })
+            }
+        })
+    }
 })
 
 window.addEventListener(`popstate`, () => {

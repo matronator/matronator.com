@@ -27,6 +27,23 @@ html, body {
   text-decoration: none;
   opacity: 1;
 }
+.locale {
+  left: unset;
+  right: 10px;
+  cursor: pointer;
+}
+
+.webswitcher.locale a.locale-active {
+  opacity: .6;
+  font-weight: 700;
+}
+.webswitcher.locale a.locale-active:hover {
+  opacity: 1;
+}
+.locale-divider {
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
 
 .mainmenu {
   height: 100vh;
