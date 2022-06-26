@@ -7,3 +7,9 @@
 /.idea/modules.xml
 /.idea/vcs.xml
 /.idea/workspace.xml
+node_modules
+.parcel-cache
+dist
+pnpm-lock.yaml
+
+/vendor/

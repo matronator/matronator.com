@@ -1,3 +1,5 @@
+import baguetteBox from "baguettebox.js";
+
 document.addEventListener(`DOMContentLoaded`, () => {
     pageLoaded()
 

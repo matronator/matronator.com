@@ -1,0 +1,19 @@
+{
+    "name": "matronator/matronator.com",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Matronator",
+            "email": "5470780+matronator@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/yaml": "^6.1"
+    }
+}

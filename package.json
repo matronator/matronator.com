@@ -1,0 +1,40 @@
+{
+  "name": "matronator.com",
+  "version": "1.0.0",
+  "description": "Source code for https://matronator.com",
+  "source": "index.html",
+  "browserslist": "IE 11",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build",
+    "start-two": "browser-sync start --config bs-config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matronator/matronator.com.git"
+  },
+  "author": "Matronator",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matronator/matronator.com/issues"
+  },
+  "homepage": "https://github.com/matronator/matronator.com#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.0",
+    "@babel/preset-env": "^7.18.2",
+    "@parcel/babel-plugin-transform-runtime": "^2.6.1",
+    "@parcel/babel-preset-env": "^2.6.1",
+    "@parcel/config-default": "^2.6.1",
+    "@parcel/core": "^2.6.1",
+    "@parcel/packager-raw-url": "2.6.1",
+    "@parcel/transformer-babel": "^2.6.1",
+    "@parcel/transformer-webmanifest": "2.6.1",
+    "parcel": "^2.6.1",
+    "posthtml-beautify": "^0.7.0",
+    "posthtml-include": "^1.7.4"
+  },
+  "dependencies": {
+    "baguettebox.js": "^1.11.1"
+  }
+}

@@ -58,6 +58,7 @@ html, body {
   font-family: "bebas-kai", sans-serif;
   font-size: 4em;
   cursor: pointer;
+  text-shadow: 0 0 8px #00000044;
 }
 .menuitem:hover h1 {
   letter-spacing: .4em;
@@ -111,19 +112,22 @@ html, body {
 }
 
 #about {
-  background-color: #63b1d0;
+  /* background-color: #63b1d0;
   background-image: linear-gradient(0deg, transparent 50%, rgba(255,255,255,.08) 30%);
-  background-size: 80px 80px;
+  background-size: 80px 80px; */
+  background-image: linear-gradient(0deg, #bdbdbd 0%, #adadad 100%);
 }
 #work {
-  background-color: #efbd5a;
+  /* background-color: #efbd5a;
   background-image: linear-gradient(0deg, transparent 50%, rgba(255,255,255,.11) 30%);
-  background-size: 100px 100px;
+  background-size: 100px 100px; */
+  background-image: linear-gradient(0deg, #791414 0%, #a72020 100%);
 }
 #contact {
-  background-color: #f36967;
-  background-image: linear-gradient(0deg, transparent 50%, rgba(255,255,255,.08) 30%);
-  background-size: 130px 130px;
+  /* background-color: #f36967; */
+  /* background-image: linear-gradient(0deg, transparent 50%, rgba(255,255,255,.08) 30%); */
+  /* background-size: 130px 130px; */
+  background-image: linear-gradient(0deg, #0f0f0f 0%, #1d1d1d 100%);
 }
 .donations {
   display: flex;
@@ -197,6 +201,11 @@ html, body {
 
 #content-about p.lead {
   font-size: 1.125rem;
+}
+
+#content-about > p {
+  /* color: #000000;
+  text-shadow: 0 0 3px #00000099; */
 }
 
 #content-work {
@@ -375,6 +384,17 @@ background-image: url("../img/tech/tech14.jpg");
 .email-link:hover, .email-link:active, .email-link:focus {
   color: #007bff;
   text-decoration: none;
+}
+
+.art-grid-wrapper {
+  overflow: hidden;
+  max-height: 600px;
+  position: relative;
+}
+.art-grid {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 100%;
 }
 
 .tech-grid-wrapper {

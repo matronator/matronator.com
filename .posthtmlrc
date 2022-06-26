@@ -1,0 +1,12 @@
+{
+    "plugins": {
+        "posthtml-include": {
+            "root": "partials"
+        },
+        "posthtml-beautify": {
+            "rules": {
+                "blankLines": false
+            }
+        }
+    }
+}
