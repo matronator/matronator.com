@@ -5,38 +5,15 @@ document.addEventListener(`DOMContentLoaded`, () => {
 
     baguetteBox.run(`.art-gallery`)
 
-    const menuItems = document.querySelectorAll(`.menuitem`)
-    menuItems.forEach(el => {
-        el.addEventListener(`click`, evt => {
-            if (evt.metaKey || evt.button === 1) return true
-            if (evt.target !== el) {
-                if (evt.target.hasAttribute(`data-location`)
-                    || evt.target.hasAttribute(`href`)
-                    || evt.target.hasAttribute(`src`)
-                    || evt.target.hasAttribute(`onclick`)
-                    || evt.target.hasAttribute(`data-gallery`)
-                    || evt.target.hasAttribute(`data-image-href`)
-                    || evt.target.tagName === `I`) return
-            }
-            evt.preventDefault()
-            const contentDiv = el.querySelector(`.contentdiv`)
-            menuItems.forEach(item => {
-                if (el !== item) {
-                    item.classList.remove(`toggled`)
-                    item.querySelector(`.contentdiv`).classList.add(`hidden`)
-                }
-            })
-            if (!el.classList.contains(`toggled`)) {
-                history.pushState(null, null, el.getAttribute(`data-location`))
-                el.classList.add(`toggled`)
-                contentDiv.classList.remove(`hidden`)
-            } else {
-                history.pushState(null, null, `/`)
-                el.classList.remove(`toggled`)
-                contentDiv.classList.add(`hidden`)
-            }
-        })
-    })
+    initMenuItems();
+
+    // const codingDiv = document.getElementById(`coding`)
+    // codingDiv.addEventListener(`mouseenter`, e => {
+    //     codingDiv.querySelector(`.subcontentdiv`).style.willChange = `width, padding, opacity, min-width, max-width`
+    // })
+    // codingDiv.addEventListener(`transitionend`, e => {
+    //     codingDiv.querySelector(`.subcontentdiv`).style.willChange = `auto`
+    // })
 
     const techCards = document.querySelectorAll(`.card-body`)
     techCards.forEach(el => {
@@ -90,49 +67,179 @@ window.addEventListener(`popstate`, () => {
 })
 
 function pageLoaded() {
-    const hashes = location.hash.split(`#`, 2)
+    const overlay = document.getElementById(`page-loading`)
     const parts = location.hash.indexOf(`-`) !== -1 ? location.hash.replace(`#`, ``)
         .split(`-`, 2) : [location.hash.replace(`#`, ``), ``]
     const page = parts[0]
     const hash = parts[1]
     // console.log(`#${page}-${hash}`)
-    document.querySelectorAll(`.contentdiv`).forEach(el => {
+    document.querySelectorAll(`.contentdiv, .subcontentdiv`).forEach(el => {
         el.classList.add(`hidden`)
     })
-    document.querySelectorAll(`.menuitem`).forEach(el => {
+    const submenuItems = document.querySelectorAll(`.submenu-item`);
+    const menuItems = document.querySelectorAll(`.menuitem`);
+    menuItems.forEach(el => {
         el.classList.remove(`toggled`)
+        el.classList.remove(`fullscreen`)
+        el.classList.remove(`collapsed`)
+    })
+    submenuItems.forEach(el => {
+        el.classList.remove(`toggled`)
+        el.classList.remove(`collapsed`)
     })
     if (page.length > 1) {
         const content = document.getElementById(page)
+        overlay.classList.add(`loading`);
+        setTimeout(function() {
+            overlay.classList.remove(`loading`);
+            overlay.classList.add(`loaded`);
+            setTimeout(function() {
+                overlay.remove();
+            }, 300);
+        }, 300);
         if (content) {
-            content.classList.add(`toggled`)
-            if (content.querySelector(`.contentdiv`)) {
-                content.querySelector(`.contentdiv`).classList.remove(`hidden`)
+            if (content.classList.contains(`submenu-item`)) {
+                subMenuItemToggle(content, submenuItems, menuItems, false)
+            } else if (content.classList.contains(`menuitem`)) {
+                menuItemToggle(content, submenuItems, menuItems, false)
             }
         }
-        if (hash.length > 1) {
-            const activeLinks = document.querySelectorAll(`.nav-link.active`)
-            if (activeLinks) {
-                activeLinks.forEach(el => {
-                    el.classList.remove(`active`)
-                })
+    } else {
+        overlay.remove();
+    }
+}
+
+function initMenuItems() {
+    const menuItems = document.querySelectorAll(`.menuitem`);
+    const submenuItems = document.querySelectorAll(`.submenu-item`);
+    menuItems.forEach(el => {
+        el.addEventListener(`click`, evt => {
+            if (evt.metaKey || evt.button === 1)
+                return true;
+            if (evt.target !== el) {
+                if (evt.target.hasAttribute(`data-location`)
+                    || evt.target.hasAttribute(`href`)
+                    || evt.target.hasAttribute(`src`)
+                    || evt.target.hasAttribute(`onclick`)
+                    || evt.target.hasAttribute(`data-gallery`)
+                    || evt.target.hasAttribute(`data-image-href`)
+                    || evt.target.classList.contains(`subcontentdiv`)
+                    || evt.target.tagName === `H2`
+                    || evt.target.tagName === `I`)
+                    return;
             }
-            const activeTabs = document.querySelectorAll(`.tab-pane.active.show`)
-            if (activeTabs) {
-                activeTabs.forEach(el => {
-                    el.classList.remove(`active`, `show`)
-                })
+            evt.preventDefault();
+            menuItemToggle(el, submenuItems, menuItems);
+        });
+    });
+    submenuItems.forEach(el => {
+        el.addEventListener(`click`, evt => {
+            if (evt.metaKey || evt.button === 1)
+                return true;
+            if (evt.target !== el) {
+                if (evt.target.hasAttribute(`data-location`)
+                    || evt.target.hasAttribute(`href`)
+                    || evt.target.hasAttribute(`src`)
+                    || evt.target.hasAttribute(`onclick`)
+                    || evt.target.hasAttribute(`data-gallery`)
+                    || evt.target.hasAttribute(`data-image-href`)
+                    || evt.target.tagName === `I`)
+                    return;
             }
-            const activeElements = document.querySelectorAll(`[data-active-hash="${hash}"]`)
-            if (activeElements) {
-                activeElements.forEach(el => {
-                    el.classList.add(`active`)
-                    if (el.classList.contains(`tab-pane`)) {
-                        el.classList.add(`show`)
-                    }
-                })
-            }
+            evt.preventDefault();
+            subMenuItemToggle(el, submenuItems, menuItems);
+        });
+    });
+}
+
+function subMenuItemToggle(el, submenuItems, menuItems, push = true) {
+    const subContentDiv = el.querySelector(`.subcontentdiv`);
+    const workItem = document.getElementById(`work`);
+    submenuItems.forEach(item => {
+        if (el.id !== item.id) {
+            item.classList.remove(`toggled`);
+            item.querySelector(`.subcontentdiv`).classList.add(`hidden`);
         }
+    });
+    if (!el.classList.contains(`toggled`)) {
+        if (push) { history.pushState(null, null, el.getAttribute(`data-location`)) };
+        el.classList.add(`toggled`);
+        subContentDiv.classList.remove(`hidden`);
+        subContentDiv.classList.add(`transitioning`);
+        el.classList.add(`opening`);
+        setTimeout(function() {
+            subContentDiv.classList.remove(`transitioning`);
+            el.classList.remove(`opening`);
+        }, 500);
+
+        workItem.querySelector(`.contentdiv`).classList.remove(`hidden`);
+        workItem.classList.add(el.id);
+
+        menuItems.forEach(item => {
+            if (item.id !== workItem.id) {
+                item.classList.add(`collapsed`);
+            }
+        });
+        submenuItems.forEach(item => {
+            if (item.id !== el.id) {
+                item.classList.add(`collapsed`);
+            }
+        });
+        workItem.classList.add(`fullscreen`);
+        workItem.classList.add(`toggled`);
+    } else {
+        if (push) { history.pushState(null, null, `#work`); }
+        el.classList.remove(`toggled`);
+        subContentDiv.classList.add(`hidden`);
+        subContentDiv.classList.add(`transitioning`);
+        el.classList.add(`closing`);
+        setTimeout(function() {
+            subContentDiv.classList.remove(`transitioning`);
+            el.classList.remove(`closing`);
+        }, 400);
+
+        menuItems.forEach(item => {
+            item.classList.remove(`collapsed`);
+        });
+        submenuItems.forEach(item => {
+            item.classList.remove(`collapsed`);
+        });
+        workItem.classList.remove(`fullscreen`);
+        workItem.classList.remove(el.id);
+    }
+}
+
+function menuItemToggle(el, submenuItems, menuItems, push = true) {
+    const contentDiv = el.querySelector(`.contentdiv`);
+    menuItems.forEach(item => {
+        if (el.id !== item.id) {
+            item.classList.remove(`toggled`);
+            item.querySelector(`.contentdiv`).classList.add(`hidden`);
+        }
+    });
+    if (!el.classList.contains(`toggled`)) {
+        if (push) { history.pushState(null, null, el.getAttribute(`data-location`)) };
+        el.classList.add(`toggled`);
+        contentDiv.classList.remove(`hidden`);
+        // if (el.id === `work`) {
+        //     adjustHeight();
+        // }
+    } else {
+        if (push) { history.pushState(null, null, `/`); }
+        el.classList.remove(`toggled`);
+        contentDiv.classList.add(`hidden`);
+
+        if (el.id === `work`) {
+            submenuItems.forEach(item => {
+                item.classList.remove(`toggled`);
+                item.classList.remove(`collapsed`);
+                item.querySelector(`.subcontentdiv`).classList.add(`hidden`);
+                el.classList.remove(item.id)
+            });
+        }
+        menuItems.forEach(item => {
+            item.classList.remove(`collapsed`, `fullscreen`);
+        });
     }
 }
 
