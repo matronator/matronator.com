@@ -18,6 +18,7 @@ a {
   position: absolute;
   top: 10px;
   left: 10px;
+  z-index: 999;
 }
 .webswitcher a {
   color: #000000;
