@@ -5,10 +5,9 @@
   "source": "index.html",
   "browserslist": "IE 11",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel",
-    "build": "parcel build",
-    "start-two": "browser-sync start --config bs-config.js"
+    "clean": "rm -rf dist && mkdir dist",
+    "start": "npm run clean && parcel",
+    "build": "npm run clean && parcel build"
   },
   "repository": {
     "type": "git",

@@ -14,6 +14,11 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "symfony/yaml": "^6.1"
+        "symfony/yaml": "^5.4"
+    },
+    "config": {
+        "platform": {
+			"php": "7.4"
+		}
     }
 }
