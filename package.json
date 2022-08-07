@@ -5,9 +5,9 @@
   "source": "index.html",
   "browserslist": "IE 11",
   "scripts": {
-    "clean": "rm -rf dist && mkdir dist",
-    "start": "npm run clean && parcel",
-    "build": "npm run clean && parcel build"
+    "prebuild": "rm -rf dist && mkdir dist",
+    "start": "parcel",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
