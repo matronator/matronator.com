@@ -60,11 +60,26 @@ document.addEventListener(`DOMContentLoaded`, () => {
             }
         })
     }
+
+    protectEmail()
 })
 
 window.addEventListener(`popstate`, () => {
     pageLoaded()
 })
+
+function protectEmail() {
+    let elements = document.querySelectorAll('.protected');
+    elements.forEach(el => {
+        el.addEventListener(`pointerenter`, showEmail, false)
+    })
+
+    function showEmail(evt) {
+        evt.currentTarget.setAttribute(`href`, atob(`bWFpbHRvOmluZm9AbWF0cm9uYXRvci5jb20=`))
+        evt.currentTarget.innerHTML = atob(`aW5mb0BtYXRyb25hdG9yLmNvbQ==`);
+        evt.currentTarget.removeEventListener(`pointerenter`, showEmail, false)
+    }
+}
 
 function pageLoaded() {
     const overlay = document.getElementById(`page-loading`)
