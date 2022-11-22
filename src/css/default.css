@@ -647,6 +647,12 @@ background-image: url("../img/tech/tech13.jpg");
 #techfolio14{
 background-image: url("../img/tech/tech14.jpg");
 }
+#techfolio15{
+background-image: url("../img/tech/tech15.jpg");
+}
+#techfolio16{
+background-image: url("../img/tech/tech16.jpg");
+}
 
 .nav-pills {
   background-color: #8a8a8a;
@@ -694,7 +700,7 @@ background-image: url("../img/tech/tech14.jpg");
   bottom: 0;
   left: 0; right: 0;
   height: 30px;
-  background-image: linear-gradient(0deg, #241724 20%, #1a121f00 100%);
+  background-image: linear-gradient(0deg, #740909 20%, #750f0f00 100%);
 }
 
 .tech-grid {

@@ -21,6 +21,13 @@ projects:
   artDesign:
     followMe: 'Sledujte mě na:'
   code:
+    mtrgen:
+      title: MTRGen
+      body: CLI generátor PHP souborů z vlastně vytvořených JSON, YAML a NEON šablon.
+        <a href="https://matronator.github.io/MTRGen/" target="_blank" title="Dokumentace">Dokumentace k použití.</a>
+    parsem:
+      title: Pars'Em
+      body: Parser JSON, YAML a NEON šablon pro MTRGen.
     axette:
       title: Axette
       body: Velmi jednoduchá a lehká AJAX knihovna pro Nette Framework.

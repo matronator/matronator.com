@@ -18,6 +18,13 @@ projects:
   artDesign:
     followMe: '👇👣👆🙏:'
   code:
+    mtrgen:
+      title: MTRGen
+      body: CLI file generator engine that can generate PHP files from JSON/YAML/NEON templates.
+        <a href="https://matronator.github.io/MTRGen/" target="_blank" title="Documentation">Link to documentation.</a>
+    parsem:
+      title: Pars'Em
+      body: Parser for YAML, JSON and NEON templates for MTRGen.
     axette:
       title: Axette
       body: Very simple and lightweight AJAX library for Nette Framework.
