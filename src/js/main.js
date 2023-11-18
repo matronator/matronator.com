@@ -43,7 +43,13 @@ document.addEventListener(`DOMContentLoaded`, () => {
         })
     }
 
-    fetchLocale(location.hostname === `xn--7k8hc83f.ws` ? `emoji` : `en`)
+    if (location.hostname === `xn--7k8hc83f.ws`) {
+        fetchLocale(`emoji`)
+    } else if (location.hostname === `matronator.cz`) {
+        fetchLocale(`cs`)
+    } else {
+        fetchLocale(`en`)
+    }
 
     const langToggles = document.querySelectorAll(`[data-language-toggle]`)
     if (langToggles) {
