@@ -146,7 +146,8 @@ function initMenuItems() {
                     || evt.target.hasAttribute(`data-image-href`)
                     || evt.target.classList.contains(`subcontentdiv`)
                     || evt.target.tagName === `H2`
-                    || evt.target.tagName === `I`)
+                    || evt.target.tagName === `I`
+                    || evt.target.tagName === `BUTTON`)
                     return;
             }
             evt.preventDefault();

@@ -1,0 +1,47 @@
+:root {
+    --py-40: 20px;
+    --py-20: 10px;
+    --tech-cols: 1;
+    --tech-gap: 10px;
+}
+@media screen and (max-width: 340px) {
+    :root {
+      --py-40: 10px;
+      --py-20: 5px;
+      --tech-cols: 1;
+      --tech-gap: 5px;
+    }
+}
+@media screen and (min-width: 576px) {
+    :root {
+      --tech-cols: 2;
+    }
+}
+@media screen and (min-width: 960px) {
+    :root {
+      --tech-gap: 10px;
+    }
+}
+@media screen and (min-width: 1280px) {
+    :root {
+      --py-40: 40px;
+      --py-20: 20px;
+      --tech-cols: 3;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    :root {
+      --tech-cols: 4;
+      --tech-gap: 5px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    :root {
+        --py-40: 60px;
+        --py-20: 30px;
+        --tech-cols: 5;
+        --tech-gap: 10px;
+    }
+}
