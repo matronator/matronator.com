@@ -11,6 +11,13 @@ about:
     ale občas také dělám úpravu videí, hudbu, design a digitální umění. Pokud máte
     zájem o moje služby, nebo chcete vidět nějaké reference, můj kontakt najdete na
     spodu stránku.
+  langs: 'Jazyky které ovládám'
+help:
+  title: Potřebuji vaši pomoc!
+  text: Nacházím se v obtížné situaci a potřebuji vaši pomoc. Dlouhou dobu jsem pracoval
+    na svých projektech zdarma, ale teď potřebuji platit za server a doménu mimo jiné.
+    Pokud se ti líbí moje práce a rád bys mě podpořil, můžeš mi poslat libovolný finanční příspěvek.
+    Velmi ti děkuji!
 projects:
   tabs:
     music: Hudba
@@ -21,6 +28,11 @@ projects:
   artDesign:
     followMe: 'Sledujte mě na:'
   code:
+    amock:
+      title: Amock
+      body: Automaticky generovaný JSON server pro REST API napsaný v Go. Zdrojový kód
+        <a href="https://github.com/matronator/amock" target="_blank" title="Source
+        code">je na GitHubu.</a>
     mtrgen:
       title: MTRGen
       body: CLI generátor PHP souborů z vlastně vytvořených JSON, YAML a NEON šablon.

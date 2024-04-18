@@ -269,6 +269,10 @@ a {
   filter: drop-shadow(0 0 8px #00000033);
 }
 
+.about-langs > a {
+  text-decoration: none;
+}
+
 .contentdiv {
   display: flex;
   flex-direction: column;
@@ -549,7 +553,11 @@ a {
   margin-bottom: 0;
   width: auto;
 }
-.artfolio:hover, .techfolio:hover {
+#techfolioCard{
+  background-image: var(--imageSrc);
+  background-size: 100%;
+}
+.artfolio:hover, #techfolioCard.techfolio:hover {
   background-size: 110%;
 }
 
@@ -604,54 +612,8 @@ background-size: auto 100%;
 #artfolio18:hover {
   background-size: auto 110%;
 }
-#techfolio1{
-background-image: url("../img/tech/tech1.jpg");
-}
-#techfolio2{
-background-image: url("../img/tech/tech2.jpg");
-}
-#techfolio3{
-background-image: url("../img/tech/tech3.jpg");
-}
-#techfolio4{
-background-image: url("../img/tech/tech4.jpg");
-}
-#techfolio5{
-background-image: url("../img/tech/tech5.jpg");
-}
-#techfolio6{
-background-image: url("../img/tech/tech6.jpg");
-}
-#techfolio7{
-background-image: url("../img/tech/tech7.jpg");
-}
-#techfolio8{
-background-image: url("../img/tech/tech8.jpg");
-}
-#techfolio9{
-background-image: url("../img/tech/tech9.jpg");
-}
-#techfolio10{
-background-image: url("../img/tech/tech10.jpg");
-}
-#techfolio11{
-background-image: url("../img/tech/tech11.jpg");
-background-position: top center;
-}
-#techfolio12{
-background-image: url("../img/tech/tech12.jpg");
-}
-#techfolio13{
-background-image: url("../img/tech/tech13.jpg");
-}
-#techfolio14{
-background-image: url("../img/tech/tech14.jpg");
-}
-#techfolio15{
-background-image: url("../img/tech/tech15.jpg");
-}
-#techfolio16{
-background-image: url("../img/tech/tech16.jpg");
+#techfolio-card-11{
+  background-position: top center;
 }
 
 .nav-pills {

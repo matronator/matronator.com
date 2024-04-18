@@ -5,6 +5,8 @@
   "source": "index.html",
   "browserslist": "IE 11",
   "scripts": {
+    "dev": "npm run prebuild && npm-run-all -p start serve",
+    "serve": "php -S localhost:8000",
     "prebuild": "rm -rf dist && mkdir dist",
     "start": "parcel",
     "build": "parcel build"
@@ -32,8 +34,5 @@
     "parcel": "^2.8.0",
     "posthtml-beautify": "^0.7.0",
     "posthtml-include": "^1.7.4"
-  },
-  "dependencies": {
-    "baguettebox.js": "^1.11.1"
   }
 }

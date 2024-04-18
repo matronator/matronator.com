@@ -10,6 +10,14 @@ about:
     my work. I'm mostly a web developer (HTML/CSS/JS/PHP) but I also do video editing,
     music and design. If you'd like to hire me for a job or want to see some more
     examples/references, contacts are at the bottom of the page.
+  langs: 'Languages I know'
+help:
+  title: I need your help!
+  text: I have found myself in a difficult situation and I need your help. I have
+    been working on my projects for free for a long time, but now I need to pay for
+    the server and domain among other things. Please read the story below and if you
+    like my work and would like to support me, you can send me a donation in any amount.
+    Thank you very much!
 projects:
   tabs:
     music: Music
@@ -20,6 +28,11 @@ projects:
   artDesign:
     followMe: 'Follow me on:'
   code:
+    amock:
+      title: Amock
+      body: A simple auto-generated JSON server for REST APIs written in Go. Source code
+        <a href="https://github.com/matronator/amock" target="_blank" title="Source
+        code">available on GitHub.</a>
     mtrgen:
       title: MTRGen
       body: CLI File generator engine for generating PHP files from JSON/YAML/NEON templates.
