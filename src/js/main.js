@@ -75,13 +75,13 @@ window.addEventListener(`popstate`, () => {
 function protectEmail() {
     let elements = document.querySelectorAll('.protected');
     elements.forEach(el => {
-        el.addEventListener(`pointerenter`, showEmail, false)
-    })
+        el.addEventListener(`pointerenter`, showEmail, false);
+    });
 
     function showEmail(evt) {
-        evt.currentTarget.setAttribute(`href`, atob(`bWFpbHRvOmluZm9AbWF0cm9uYXRvci5jb20=`))
-        evt.currentTarget.innerHTML = atob(`aW5mb0BtYXRyb25hdG9yLmNvbQ==`);
-        evt.currentTarget.removeEventListener(`pointerenter`, showEmail, false)
+        evt.currentTarget.setAttribute(`href`, atob(`bWFpbHRvOmluZm9AbWF0cm9uYXRvci5jeg==`));
+        evt.currentTarget.innerHTML = atob(`aW5mb0BtYXRyb25hdG9yLmN6`);
+        evt.currentTarget.removeEventListener(`pointerenter`, showEmail, false);
     }
 }
 

@@ -1,5 +1,5 @@
 general:
-  email: info@matronator.com
+  email: info@matronator.cz
 menu:
   about: 🙋🏻‍♂️ℹ️👆
   work: 📂🗄🗃
@@ -38,7 +38,7 @@ projects:
       title: Starterpack
       body: >-
         Starter template for Nette projects with custom CMS. <a
-        href="https://cms.matronator.com" target="_blank" title="Starterpack
+        href="https://cms.matronator.cz" target="_blank" title="Starterpack
         DEMO">Live preview</a>
     matecak:
       title: Matečák Soundboard
@@ -84,4 +84,5 @@ projects:
     faucet:
       title: Matronator's Bitcoin Faucet
       body: 💰💰💰🅱️. 💹💵💵💵.
-contact: {}
+contact:
+  support: 👉 <a href="https://support.matronator.cz">support.matronator.cz</a> pro další způsoby jak mě podpořit.

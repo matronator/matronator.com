@@ -1,6 +1,6 @@
 ---
 general:
-  email: info@matronator.com
+  email: info@matronator.cz
 menu:
   about: Úvod
   work: Tvorba
@@ -35,11 +35,11 @@ projects:
         code">je na GitHubu.</a>
     mtrgen:
       title: MTRGen
-      body: CLI generátor PHP souborů z vlastně vytvořených JSON, YAML a NEON šablon.
-        <a href="https://matronator.github.io/MTRGen/" target="_blank" title="Dokumentace">Dokumentace k použití.</a>
+      body: CLI generátor souborů z šablon. <a href="https://mtrgen.com/docs/" target="_blank" title="Dokumentace">Dokumentace</a>
+        a <a href="https://github.com/matronator/MTRGen" target="_blank" title="GitHub projektu">zdrojový kód.</a>
     parsem:
       title: Pars'Em
-      body: Parser JSON, YAML a NEON šablon pro MTRGen.
+      body: Parser šablon a template engine pro MTRGen.
     axette:
       title: Axette
       body: Velmi jednoduchá a lehká AJAX knihovna pro Nette Framework.
@@ -50,13 +50,8 @@ projects:
         code">je na GitHubu.</a>
     starterpack:
       title: Starterpack
-      body: Základní kostra projektu pro Nette s vlastním CMS. <a href="https://cms.matronator.com"
+      body: Základní kostra projektu pro Nette s vlastním CMS. <a href="https://cms.matronator.cz"
         target="_blank" title="Starterpack DEMO">Živá ukázka</a>
-    matecak:
-      title: Matečák Soundboard
-      body: Soundboard (nechvalně) známého Českého videa Matečák s věstavenou beat
-        machine. Zdrojový kód <a href="https://github.com/matronator/MatecakSoundboard"
-        target="_blank" title="Source code">je na GitHubu.</a>
     globalCollapse:
       title: 'Global Collapse: Pandemic'
       body: Browserové (v prohlížeči) MMORPG napsané v PHP s Nette. Zdrojový kód <a
@@ -66,6 +61,10 @@ projects:
       title: DC Protěž
       body: Webové stránky a vlastní CMS pro dobrovolnické a komunitní centrum Protěž
         v Praze.
+    burner:
+      title: Burner
+      body: Stránka pro vytváření a posílání jednorázových samo mazacích zpráv, inspirováno
+        Privnotem.
     btcGo:
       title: BitcoinGo.io
       body: Zrušený blockchainový projekt a kryptoměna.
@@ -76,15 +75,16 @@ projects:
       title: Nobles Manor Apartments
       body: Webové stránky pro rezervace apartmánů Nobles Manor pod hradem na Malé
         Straně v Praze.
-    burner:
-      title: Burner
-      body: Stránka pro vytváření a posílání jednorázových samo mazacích zpráv, inspirováno
-        Privnotem.
     magicWars:
       title: Magic Wars Demo (15.3 MB)
       body: Karetní hra pro Windows. Demo obsahuje tři balíčky a protivníky. Na projektu
         se již několik let nepracuje. <a href="http://magicwars.8u.cz/" target="_blank"
         title="Magic Wars">Více info (Česky)</a>
+    matecak:
+      title: Matečák Soundboard
+      body: Soundboard (nechvalně) známého Českého videa Matečák s věstavenou beat
+        machine. Zdrojový kód <a href="https://github.com/matronator/MatecakSoundboard"
+        target="_blank" title="Source code">je na GitHubu.</a>
     feedTheFlames:
       title: Feed the Flames
       body: Jednoduchý HTML5/JavaScript herní koncept vytvořený v CraftyJS. <a href="https://github.com/matronator/feed-the-flames"
@@ -97,4 +97,5 @@ projects:
       title: Matronator's Bitcoin Faucet
       body: Jeden z nejvýnosnějších a nejnavštěvovanějších bitcoinových faucetů na
         FaucetSystem.com (CryptoBara).
-contact: {}
+contact:
+  support: Navštivte <a href="https://support.matronator.cz">support.matronator.cz</a> pro další způsoby jak mě podpořit.

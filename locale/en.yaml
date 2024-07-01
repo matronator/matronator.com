@@ -1,6 +1,6 @@
 ---
 general:
-  email: info@matronator.com
+  email: info@matronator.cz
 menu:
   about: About
   work: Projects
@@ -35,11 +35,12 @@ projects:
         code">available on GitHub.</a>
     mtrgen:
       title: MTRGen
-      body: CLI File generator engine for generating PHP files from JSON/YAML/NEON templates.
-        <a href="https://matronator.github.io/MTRGen/" target="_blank" title="Documentation">Documentation.</a>
+      body: CLI file generator for generating files from templates.
+        <a href="https://mtrgen.com/docs/" target="_blank" title="Documentation">Documentation</a>
+        and <a href="https://github.com/matronator/MTRGen" target="_blank" title="Project's GitHub">source code.</a>
     parsem:
       title: Pars'Em
-      body: Parser for YAML, JSON and NEON templates for MTRGen.
+      body: Template parser and templating engine for MTRGen.
     axette:
       title: Axette
       body: Very simple and lightweight AJAX library for Nette Framework.
@@ -50,13 +51,8 @@ projects:
         code">available on GitHub.</a>
     starterpack:
       title: Starterpack
-      body: Starter template for Nette projects with custom CMS. <a href="https://cms.matronator.com"
+      body: Starter template for Nette projects with custom CMS. <a href="https://cms.matronator.cz"
         target="_blank" title="Starterpack DEMO">Live preview</a>
-    matecak:
-      title: Matečák Soundboard
-      body: Soundboard of the (in)famous Czech video Matečák, with built-in beat machine.
-        Source code <a href="https://github.com/matronator/MatecakSoundboard" target="_blank"
-        title="Source code">available on GitHub.</a>
     globalCollapse:
       title: 'Global Collapse: Pandemic'
       body: Browser-based MMORPG made in PHP with Nette. Source code <a href="https://github.com/matronator/GlobalCollapse"
@@ -64,6 +60,9 @@ projects:
     protez:
       title: DC Protěž
       body: Website and custom-made CMS for a volunteer and community center in Prague.
+    burner:
+      title: Burner
+      body: Service for creating self-destructing messages, inspired by Privnote.
     btcGo:
       title: BitcoinGo.io
       body: Cancelled blockchain project and cryptocurrency.
@@ -75,14 +74,16 @@ projects:
       title: Nobles Manor Apartments
       body: Booking website for Nobles Manor under the Castle apartments in the Lesser
         Town of Prague.
-    burner:
-      title: Burner
-      body: Service for creating self-destructing messages, inspired by Privnote.
     magicWars:
       title: Magic Wars Demo (15.3 MB)
       body: A single player card game for Windows. Demo contains three decks and enemies.
         Project inactive for several years now. <a href="http://magicwars.8u.cz/"
         target="_blank" title="Magic Wars">More info (CZ only)</a>
+    matecak:
+      title: Matečák Soundboard
+      body: Soundboard of the (in)famous Czech video Matečák, with built-in beat machine.
+        Source code <a href="https://github.com/matronator/MatecakSoundboard" target="_blank"
+        title="Source code">available on GitHub.</a>
     feedTheFlames:
       title: Feed the Flames
       body: Simple HTML5/JavaScript game concept made with CraftyJS. <a href="https://github.com/matronator/feed-the-flames"
@@ -94,4 +95,5 @@ projects:
     faucet:
       title: Matronator's Bitcoin Faucet
       body: One of the highest paying bitcoin faucet on FaucetSystem.com (CryptoBara).
-contact: {}
+contact:
+  support: Visit <a href="https://support.matronator.cz">support.matronator.cz</a> for more ways how you can support me.
