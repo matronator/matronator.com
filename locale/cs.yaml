@@ -28,6 +28,12 @@ projects:
   artDesign:
     followMe: 'Sledujte mě na:'
   code:
+    viewSync:
+      title: view-sync
+      body: Jednoduchá alternativa k <code>x-model</code> atributu v Alpine.js, která je CSP-friendly (není potřeba 'unsafe-eval').
+    pingTracker:
+      title: Ping Tracker
+      body: Malá knihovna, která automaticky přidá <code>ping</code> atribut ke všem <code>&lt;a&gt;</code> tagům na stránce s nastavitelnými URL.
     amock:
       title: Amock
       body: Automaticky generovaný JSON server pro REST API napsaný v Go. Zdrojový kód

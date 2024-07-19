@@ -553,12 +553,13 @@ a {
   margin-bottom: 0;
   width: auto;
 }
-#techfolioCard{
+[id^="techfolioCard"].techfolio {
   background-image: var(--imageSrc);
-  background-size: 100%;
+  background-size: 100% auto;
+  aspect-ratio: 1.83 / 1;
 }
-.artfolio:hover, #techfolioCard.techfolio:hover {
-  background-size: 110%;
+.artfolio:hover, [id^="techfolioCard"].techfolio:hover {
+  background-size: 110% auto;
 }
 
 #artfolio1 {
@@ -612,8 +613,15 @@ background-size: auto 100%;
 #artfolio18:hover {
   background-size: auto 110%;
 }
-#techfolio-card-11{
-  background-position: top center;
+.techfolio-card-10.techfolio, .techfolio-card-14.techfolio,
+.techfolio-card-16.techfolio, .techfolio-card-17.techfolio,
+.techfolio-card-18.techfolio, .techfolio-card-19.techfolio {
+  background-size: 110% auto;
+}
+.techfolio-card-10.techfolio:hover, .techfolio-card-14.techfolio:hover,
+.techfolio-card-16.techfolio:hover, .techfolio-card-17.techfolio:hover,
+.techfolio-card-18.techfolio:hover, .techfolio-card-19.techfolio:hover {
+  background-size: 120% auto;
 }
 
 .nav-pills {

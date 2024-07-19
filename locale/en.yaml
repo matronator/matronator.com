@@ -28,6 +28,12 @@ projects:
   artDesign:
     followMe: 'Follow me on:'
   code:
+    viewSync:
+      title: view-sync
+      body: Lightweight alternative to Alpine.js' <code>x-model</code> attribute, that is CSP friendly (no 'unsafe-eval' needed).
+    pingTracker:
+      title: Ping Tracker
+      body: A tiny library that adds <code>ping</code> attribute to all <code>&lt;a&gt;</code> tags on the site with customizable list of URLs.
     amock:
       title: Amock
       body: A simple auto-generated JSON server for REST APIs written in Go. Source code
