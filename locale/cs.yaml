@@ -28,6 +28,10 @@ projects:
   artDesign:
     followMe: 'Sledujte mě na:'
   code:
+    pikolang:
+      title: PIKOlang
+      body: Jednoduchý esoterický 2D programovací jazyk. <a href="https://github.com/matronator/piko" target="_blank" title="Interpreter">Interpreter zde.</a>
+        <br><a href="https://pikolang.matronator.cz/" target="_blank" title="Zkus online">Vyzkoušej online!</a>
     viewSync:
       title: view-sync
       body: Jednoduchá alternativa k <code>x-model</code> atributu v Alpine.js, která je CSP-friendly (není potřeba 'unsafe-eval').

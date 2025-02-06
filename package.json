@@ -6,7 +6,7 @@
   "browserslist": "IE 11",
   "scripts": {
     "dev": "npm run prebuild && npm-run-all -p start serve",
-    "serve": "php -S localhost:8000",
+    "serve": "source .env && php -S localhost:8000",
     "prebuild": "rm -rf dist && mkdir dist && rm -rf .parcel-cache",
     "start": "parcel",
     "build": "parcel build",
@@ -16,12 +16,18 @@
     "type": "git",
     "url": "git+https://github.com/matronator/matronator.com.git"
   },
-  "author": "Matronator",
+  "author": {
+    "name": "Matronator",
+    "email": "info@matronator.cz",
+    "url": "https://matronator.cz"
+  },
+  "homepage": "https://matronator.cz",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/matronator/matronator.com/issues"
   },
-  "homepage": "https://github.com/matronator/matronator.com#readme",
+  "readme": "https://github.com/matronator/matronator.com?tab=readme-ov-file#matronatorcom",
+  "funding": "https://support.matronator.cz",
   "devDependencies": {
     "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.3",

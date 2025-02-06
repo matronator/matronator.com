@@ -28,6 +28,10 @@ projects:
   artDesign:
     followMe: 'Follow me on:'
   code:
+    pikolang:
+      title: PIKOlang
+      body: A 2D embarrassingly parallel esoteric programming language. <a href="https://github.com/matronator/piko" target="_blank" title="Interpreter">Interpreter here.</a>
+        <br><a href="https://pikolang.matronator.cz/" target="_blank" title="Try online">Try online!</a>
     viewSync:
       title: view-sync
       body: Lightweight alternative to Alpine.js' <code>x-model</code> attribute, that is CSP friendly (no 'unsafe-eval' needed).
