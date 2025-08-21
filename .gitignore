@@ -9,7 +9,6 @@
 /.idea/workspace.xml
 node_modules
 .parcel-cache
-dist
 pnpm-lock.yaml
 backup/
 /vendor/
