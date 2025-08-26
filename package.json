@@ -10,7 +10,7 @@
     "prebuild": "rm -rf dist && mkdir dist && rm -rf .parcel-cache",
     "start": "parcel",
     "build": "parcel build",
-    "postbuild": "cp -Rv lib dist/lib && cp .env dist/.env"
+    "postbuild": "cp -Rv lib dist/lib"
   },
   "repository": {
     "type": "git",
