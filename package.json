@@ -9,7 +9,7 @@
     "serve": "source .env && php -S localhost:8000",
     "prebuild": "rm -rf dist && mkdir dist && rm -rf .parcel-cache",
     "start": "parcel",
-    "build": "parcel build --public-url /matronator.com/",
+    "build": "parcel build --public-url ./",
     "postbuild": "cp -Rv lib dist/lib"
   },
   "repository": {
